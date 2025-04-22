@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Notes - Fast &amp; Simple
+  ~ Copyright (C) 2025 IconsNotFound
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_16sdp"
+    android:scrollbars="none"
+    android:requiresFadingEdge="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialog_root_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/dialog_icon"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:contentDescription="@string/dialog_icon"
+            android:src="@drawable/icon_settings"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?attr/colorOnPrimaryContainer" />
+
+        <TextView
+            android:id="@+id/dialog_title"
+            style="@style/DialogTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:text="@string/hello_world"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/dialog_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/horizontal_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="?attr/colorOutlineVariant"
+            app:layout_constraintEnd_toEndOf="@id/dialog_title"
+            app:layout_constraintStart_toStartOf="@id/dialog_icon"
+            app:layout_constraintTop_toBottomOf="@id/dialog_title" />
+
+        <TextView
+            android:id="@+id/dialog_message"
+            style="@style/DialogBodyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_16sdp"
+            android:text="@string/hello_world"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_bar" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_12sdp"
+            android:enabled="false"
+            android:hint="@string/hint"
+            android:visibility="gone"
+            app:boxCornerRadiusBottomEnd="@dimen/_16sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_16sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_16sdp"
+            app:boxCornerRadiusTopStart="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@id/dialog_message">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/dialog_yes_button"
+            style="@style/ButtonText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:minWidth="@dimen/_48sdp"
+            android:text="@string/yes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_text" />
+
+        <Button
+            android:id="@+id/dialog_no_button"
+            style="@style/ButtonText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/_48sdp"
+            android:text="@string/no"
+            app:layout_constraintEnd_toEndOf="@id/dialog_yes_button"
+            app:layout_constraintTop_toBottomOf="@id/dialog_yes_button" />
+
+        <Button
+            android:id="@+id/dialog_neutral_button"
+            style="@style/ButtonText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/_48sdp"
+            android:text="@string/cancel"
+            app:layout_constraintEnd_toEndOf="@id/dialog_no_button"
+            app:layout_constraintTop_toBottomOf="@id/dialog_no_button" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

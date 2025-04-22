@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Notes - Fast &amp; Simple
+  ~ Copyright (C) 2025 IconsNotFound
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_12sdp">
+
+    <View
+        android:id="@+id/horizontal_bar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        android:background="?attr/colorOutlineVariant"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:id="@+id/from_textview"
+        style="@style/SmallTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/from"
+        android:textColor="?attr/colorOutline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_bar" />
+
+    <ImageView
+        android:id="@+id/brand_logo"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/from_textview"
+        app:layout_constraintDimensionRatio="1:1"
+        app:srcCompat="@drawable/iconsnotfound_logo"
+        app:tint="?attr/colorSurfaceInverse"
+        android:contentDescription="@string/brand_logo"/>
+
+    <TextView
+        android:id="@+id/brand_name"
+        style="@style/TitleSmallTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/brand_name"
+        android:textColor="?attr/colorSurfaceInverse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/brand_logo" />
+
+
+    <Button
+        android:id="@+id/youtube"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_4sdp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/github"
+        app:layout_constraintStart_toStartOf="@id/brand_logo"
+        app:icon="@drawable/logo_youtube"
+        app:iconTint="@null"
+        app:layout_constraintTop_toBottomOf="@id/brand_name"
+        android:contentDescription="@string/youtube_channel_link"/>
+
+
+    <Button
+        android:id="@+id/github"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_16sdp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/brand_logo"
+        app:layout_constraintStart_toEndOf="@id/youtube"
+        app:layout_constraintTop_toTopOf="@id/youtube"
+        app:icon="@drawable/logo_github"
+        app:iconTint="@null"
+        android:contentDescription="@string/github_repository_link"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

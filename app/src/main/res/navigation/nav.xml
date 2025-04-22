@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Notes - Fast &amp; Simple
+  ~ Copyright (C) 2025 IconsNotFound
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.iconsnotfound.notes.fragments.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_settings"
+            app:destination="@+id/settings"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@id/home"
+            app:popUpToInclusive="false"
+            app:popUpToSaveState="true"
+            app:restoreState="true"/>
+        <action
+            android:id="@+id/action_home_to_modify"
+            app:destination="@+id/modify"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@id/home"
+            app:popUpToInclusive="false"
+            app:popUpToSaveState="true"
+            app:restoreState="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.iconsnotfound.notes.fragments.settings.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settings_to_licence"
+            app:destination="@+id/licence"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@id/licence"
+            app:popUpToInclusive="false"
+            app:popUpToSaveState="true"
+            app:restoreState="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/modify"
+        android:name="com.iconsnotfound.notes.fragments.Modify"
+        android:label="fragment_modify"
+        tools:layout="@layout/fragment_modify">
+
+        <argument
+            android:name="title"
+            app:argType="string"
+            app:nullable="true"/>
+        <argument
+            android:name="notes"
+            app:argType="com.iconsnotfound.db.entities.Notes"
+            app:nullable="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/licence"
+        android:name="com.iconsnotfound.notes.fragments.settings.Licence"
+        android:label="fragment_licence"
+        tools:layout="@layout/fragment_licence"/>
+
+</navigation>

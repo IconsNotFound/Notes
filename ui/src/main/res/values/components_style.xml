@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Notes - Fast &amp; Simple
+  ~ Copyright (C) 2025 IconsNotFound
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<resources>
+    <style name="TitleTextView" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">@dimen/_20ssp</item>
+    </style>
+
+    <style name="TitleMediumTextView" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">@dimen/_17ssp</item>
+    </style>
+
+    <style name="TitleSmallTextView" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <style name="DisplayLargeTextView" parent="TextAppearance.AppCompat.Display1">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">@dimen/_96ssp</item>
+    </style>
+
+    <style name="DisplayTextView" parent="TextAppearance.AppCompat.Display1">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">@dimen/_57ssp</item>
+    </style>
+
+
+    <style name="SmallTextView" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+    <style name="TinyTextView" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">?attr/colorOutline</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+    <style name="SuperTinyTextView" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">?attr/colorOutline</item>
+        <item name="android:textSize">@dimen/_8ssp</item>
+    </style>
+
+
+    <style name="DialogTitleTextView" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+    </style>
+    <style name="DialogBodyTextView" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+    </style>
+
+
+
+    <style name="ButtonCommon" parent="Widget.Material3.Button">
+        <item name="android:textStyle">bold</item>
+        <item name="iconSize">@dimen/_24sdp</item>
+    </style>
+    <style name="ButtonText" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textStyle">bold</item>
+        <item name="iconSize">@dimen/_24sdp</item>
+    </style>
+
+
+    <style name="ButtonIcon" parent="Widget.Material3.Button.IconButton">
+        <item name="android:textStyle">bold</item>
+        <item name="iconSize">@dimen/_24sdp</item>
+    </style>
+    <style name="ButtonIconMedium" parent="Widget.Material3.Button.IconButton">
+        <item name="android:textStyle">bold</item>
+        <item name="iconSize">@dimen/_18sdp</item>
+    </style>
+    <style name="ButtonIconFilledTonal" parent="Widget.Material3.Button.IconButton.Filled.Tonal">
+        <item name="android:textStyle">bold</item>
+        <item name="iconSize">@dimen/_24sdp</item>
+    </style>
+    <style name="ButtonIconFilledTonalMedium" parent="Widget.Material3.Button.IconButton.Filled.Tonal">
+        <item name="android:textStyle">bold</item>
+        <item name="iconSize">@dimen/_18sdp</item>
+    </style>
+    <style name="ButtonIconFilledTonalSmall" parent="Widget.Material3.Button.IconButton.Filled.Tonal">
+        <item name="iconSize">@dimen/_16sdp</item>
+    </style>
+    <style name="ButtonIconSmall" parent="Widget.Material3.Button.IconButton">
+        <item name="iconSize">@dimen/_16sdp</item>
+    </style>
+    <style name="ButtonIconFilled" parent="Widget.Material3.Button.IconButton.Filled">
+        <item name="android:textStyle">bold</item>
+        <item name="iconSize">@dimen/_24sdp</item>
+    </style>
+    <style name="ButtonIconFilledMedium" parent="Widget.Material3.Button.IconButton.Filled">
+        <item name="android:textStyle">bold</item>
+        <item name="iconSize">@dimen/_36sdp</item>
+    </style>
+    <style name="ButtonIconFilledLarge" parent="Widget.Material3.Button.IconButton.Filled">
+        <item name="android:textStyle">bold</item>
+        <item name="iconSize">@dimen/_48sdp</item>
+    </style>
+    <style name="ButtonIconOutlined" parent="Widget.Material3.Button.IconButton.Outlined">
+        <item name="android:textStyle">bold</item>
+        <item name="iconSize">@dimen/_24sdp</item>
+    </style>
+
+    <style name="ButtonIconOutlinedSmall" parent="Widget.Material3.Button.IconButton.Outlined">
+        <item name="android:textStyle">bold</item>
+        <item name="iconSize">@dimen/_16sdp</item>
+        <item name="android:padding">@dimen/_8sdp</item>
+    </style>
+
+    <style name="RoundedShapeImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_48sdp</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Notes - Fast &amp; Simple
+  ~ Copyright (C) 2025 IconsNotFound
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/_4sdp"
+    android:paddingVertical="@dimen/_2sdp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/note_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_6sdp">
+
+            <TextView
+                android:id="@+id/date_time"
+                style="@style/TinyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="end"
+                android:text="@string/hello_world"
+                app:layout_constraintBottom_toBottomOf="@id/delete_note"
+                app:layout_constraintStart_toStartOf="@id/note_text"
+                app:layout_constraintTop_toTopOf="@id/delete_note" />
+
+            <TextView
+                android:id="@+id/note_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:text="@string/hello_world"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/delete_note" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/delete_note"
+                style="@style/ButtonIconFilledTonalSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:cornerRadius="@dimen/_48sdp"
+                android:contentDescription="@string/delete_note"
+                app:icon="@drawable/icon_delete"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/note_text"/>
+
+            <Button
+                android:id="@+id/copy_note"
+                style="@style/ButtonIconSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:cornerRadius="@dimen/_48sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:contentDescription="@string/copy_note"
+                app:icon="@drawable/icon_copy"
+                app:layout_constraintEnd_toStartOf="@id/delete_note"
+                app:layout_constraintTop_toTopOf="@id/delete_note"
+                app:layout_constraintBottom_toBottomOf="@id/delete_note"/>
+
+            <Button
+                android:id="@+id/share_note"
+                style="@style/ButtonIconSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:cornerRadius="@dimen/_48sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:contentDescription="@string/share_note"
+                app:icon="@drawable/icon_share"
+                app:layout_constraintEnd_toStartOf="@id/copy_note"
+                app:layout_constraintTop_toTopOf="@id/delete_note"
+                app:layout_constraintBottom_toBottomOf="@id/delete_note"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

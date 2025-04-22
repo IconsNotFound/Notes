@@ -1,0 +1,91 @@
+[versions]
+agp = "8.9.1"
+kotlin = "1.9.24"
+coreKtx = { prefer = "1.16.0", require = "1.12.0" }
+junit = "4.13.2"
+junitVersion = { prefer = "1.2.1", require = "1.1.5" }
+espressoCore = { prefer = "3.6.1", require = "3.5.1" }
+appcompat = { prefer = "1.7.0", require = "1.6.1" }
+material = { prefer = "1.12.0", require = "1.11.0" }
+activity = { prefer = "1.10.1", require = "1.8.0" }
+constraintlayout = { prefer = "2.2.1", require = "2.1.4" }
+multidex = "2.0.1"
+startup = { prefer = "1.2.0", require = "1.1.1" }
+activityKtx = { prefer = "1.10.1", require = "1.8.0" }
+paging = { prefer = "3.3.6", require = "3.1.1" }
+viewmodelKtx = { prefer = "2.8.7", require = "2.6.1" }
+livedataKtx = { prefer = "2.8.7", require = "2.6.1" }
+commonJava8 = { prefer = "2.8.7", require = "2.6.1" }
+coroutineCore = { prefer = "1.7.3", require = "1.7.1" }
+coroutineAndroid = { prefer = "1.7.3", require = "1.7.1" }
+roomKtx = { prefer = "2.7.0", require = "2.6.1" }
+roomCompiler = { prefer = "2.7.0", require = "2.6.1" }
+roomTesting = { prefer = "2.7.0", require = "2.6.1" }
+roomPaging = { prefer = "2.7.0", require = "2.6.1" }
+googleDevtoolsKsp = { prefer = "2.0.20-1.0.25", require = "1.9.24-1.0.20" }
+
+navigation = { prefer = "2.8.9", require = "2.5.3" }
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+# navigation
+androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
+androidx-navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
+
+# (multidex) ------------------------------------
+androidx-multidex = { group = "androidx.multidex", name = "multidex", version.ref = "multidex" }
+androidx-startup = { group = "androidx.startup", name = "startup-runtime", version.ref = "startup" }
+# -----------------------------------------------
+
+# (ViewModel) -----------------------------------
+androidx-activity-ktx = {group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
+# -----------------------------------------------
+
+# (Paging3) -------------------------------------
+androidx-paging-runtime = { group = "androidx.paging", name = "paging-runtime", version.ref = "paging" }
+androidx-paging-common-ktx = { group = "androidx.paging", name = "paging-common-ktx", version.ref = "paging" }
+# -----------------------------------------------
+
+# (Lifecycle Components) ------------------------
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "viewmodelKtx" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "livedataKtx" }
+androidx-lifecycle-common-java8 = { group = "androidx.lifecycle", name = "lifecycle-common-java8", version.ref = "commonJava8" }
+# -----------------------------------------------
+
+# (Kotlin Components) ---------------------------
+jetbrains-kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutineCore" }
+jetbrains-kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutineAndroid" }
+# -----------------------------------------------
+
+# (Room Components) -----------------------------
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomKtx" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomCompiler" }
+androidx-room-testing = { group = "androidx.room", name = "room-testing", version.ref = "roomTesting" }
+androidx-room-paging = { group = "androidx.room", name = "room-paging", version.ref = "roomPaging" }
+# -----------------------------------------------
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+# (Room Components) -----------------------------
+google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "googleDevtoolsKsp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+# -----------------------------------------------
+
+# (nav safe args) -------------------------------
+androidx-navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
+# -----------------------------------------------
+
+# (Kotlin Parcelable) ---------------------------
+kotlin-parcelable = { id = "kotlin-parcelize" }
+# -----------------------------------------------
